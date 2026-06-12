@@ -9,7 +9,7 @@ import sys
 
 HEADER = '!HBBHHHH'
 HEADER_SIZE = struct.calcsize(HEADER)
-DOMAIN_PATTERN = re.compile('^[A-Za-z0-9\-\.\_]+$')
+DOMAIN_PATTERN = re.compile(r'^[A-Za-z0-9-._]+$')
 
 # Data path, will be updated from argparse
 data_path = ''
