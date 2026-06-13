@@ -55,6 +55,7 @@ or replication is performed, allowing all updates to be reflected right away.
     `example.com` should write to `/opt/records/_acme-challenge.example.com`.
 
     An example hook for the [dehydrated](https://github.com/lukas2511/dehydrated)
-    client is provided in the `example_hooks` directory.
+    client is provided in the `example_hooks` directory alongside an example hook 
+    for use with the [acme.sh](https://github.com/acmesh-official/acme.sh) client.
 
  4. Run your ACME client to generate the certificate.
