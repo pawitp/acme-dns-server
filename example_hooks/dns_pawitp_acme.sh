@@ -27,9 +27,10 @@ dns_pawitp_acme_rm() {
 
     # Delete file if it exists and only has one/zero lines
     if [ -f ${basedir}${fulldomain} ]; then
-        if [[ $(wc -l < ${basedir}${fulldomain}) -gt 1 ]]; then
+        if [[ $(wc -l < ${basedir}${fulldomain}) -ge 1 ]]; then
             sed -i "/${txtvalue}/d" ${basedir}${fulldomain}
-        else
+        fi
+	if [[ $(wc -l < ${basedir}${fulldomain}) -lt 1 ]]; then
             rm ${basedir}${fulldir}
         fi
     fi
